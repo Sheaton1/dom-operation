@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--&lt;!&ndash;DOM0级事件&ndash;&gt;-->
+<!--<button id="btn" type="button">DOM0级事件</button>-->
+<!--<script type="text/javascript">-->
+<!--    const btn = document.getElementById("btn");-->
+<!--    btn.onclick = ()=>{-->
+<!--        alert("DOM0级事件")-->
+<!--    }-->
+<!--    btn.onclick = null // 解绑事件-->
+<!--</script>-->
+
+
+<button id="btn" type="button">DOM2级事件</button>
+<script type="text/javascript">
+    const btn = document.getElementById("btn");
+    function func1() {
+        console.log("func 1");
+    }
+    function func2(){
+        console.log("func 2")
+    }
+    btn.addEventListener("click",func1,false);
+    btn.addEventListener("click",func2,false);
+    // btn.removeEventListener("click",func2,false); //解绑事件
+</script>
+
+</body>
+</html>
+
